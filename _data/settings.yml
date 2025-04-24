@@ -1,0 +1,44 @@
+#-------------------------------
+# General Site Settings
+title: Hyo-jeong Lee
+# logo: logo.svg # You can add own logo.
+description: Hyo-jeong Lee's personal webpage.
+
+
+#-------------------------------
+# Author Settings
+author:
+  name: Hyo-jeong Lee
+  image: profile.jpg
+  say-hello: <strong>Hyo-jeong Lee</strong>
+  bio: "<a href='https://eecs.gist.ac.kr/' target='_blank'>EECS</a>, <a href='https://www.gist.ac.kr/en/main.html' target='_blank'>GIST</a>, South Korea<br><br>
+Undergraduate in computer science with interdisciplinary research experience in neuroscience and biomedical science. Focused on <strong>modeling neuronal network dynamics</strong> with multi-channel neural data."
+
+
+#-------------------------------
+# Contact links
+instagram: https://www.instagram.com/tiffanyhj_0317 # Add your Instagram handle
+linkedin: https://www.linkedin.com/in/hyo-jeong-lee-888713240/ # Add your linkedin handle
+github: https://github.com/hjlee11190
+email: hyojeonglee@gm.gist.ac.kr
+
+
+#-------------------------------
+# Comment Section (Disqus)
+disqus-identifier: # add your shortname for Disqus Comment. For example mr-brown
+
+
+#-------------------------------
+# Instagram Feed
+instafeed: false # To enable the instafeed, use the value true. To turn off use the value false.
+instagram-profile: artemsheludko_ # Add instagram username
+
+
+#-------------------------------
+# Google Analytics
+google-analytics: G-XHCB3078H5 # Add your identifier. For example UA-99631805-1.
+
+
+#-------------------------------
+# Newsletter
+mailchimp: # Add your MailChimp form identifier. For example - blogenjoyfreedom.us16.list-manage.com/subscribe/post?u=cd56155d76ddeeb4c0bc4d080&amp;id=7a526cd13e

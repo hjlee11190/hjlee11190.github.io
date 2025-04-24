@@ -1,0 +1,48 @@
+.page-title-box {
+  padding: 70px 0px;
+  border-top: 1px solid $light-gray;
+  padding-bottom: 10px;
+
+  .page-title {
+    font-size: 35px;
+    line-height: 35px;
+    margin: 0;
+  }
+
+  @media only screen and (max-width: $mobile) {
+    padding: 20px 0;
+
+    .page-title {
+      font-size: 35px;
+      line-height: 35px;
+    }
+  }
+}
+
+.page {
+  margin: 25px auto;
+
+  img {
+    margin: 30px 0;
+  }
+
+  @media only screen and (max-width: $tablet) {
+    margin: 40px auto;
+  }
+}
+
+.page-box {
+  text-align: center;
+
+  .back-arrow {
+    a {
+      display: inline-block;
+      margin-left: 10px;
+      color: $dark;
+      font-weight: 700;
+      &:hover {
+        color: $black;
+      }
+    }
+  }
+}

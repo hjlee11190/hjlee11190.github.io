@@ -1,0 +1,16 @@
+---
+layout: default
+---
+
+<div class="arhive-head">
+  <div class="container">
+    <h1 class="archive-title col col-10 push-2 col-11 push-t-1 col-m-12 push-m-0">
+	Category: {{ page.tag }}
+    </h1>
+  </div>
+</div>
+
+
+{% for post in page.posts %}
+  {% include article-content.html %}
+{% endfor %}

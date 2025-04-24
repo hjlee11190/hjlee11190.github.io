@@ -1,0 +1,24 @@
+<!-- begin c-hero -->
+<div class="hero">
+  <div class="container">
+    <div class="row">
+      <div class="col col-5 col-t-10">
+        <div class="hero__image">
+          <img src="{{site.baseurl}}/images/{{ site.data.settings.author.image }}" alt="">
+        </div>
+      </div>
+      <div class="col col-7 col-t-11 last-item">
+        <div class="hero__content">
+          <h1 class="hero__title">{{ site.data.settings.author.say-hello }}</h1>
+          <p class="hero__subtitle">{{ site.data.settings.author.bio }}</p>
+          <div class="hero__social">
+            <span class="hero__social-title">Contact</span>
+            <span style="margin-left: 10px;">|</span>
+            {% include contact-link.html %}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- end hero -->
