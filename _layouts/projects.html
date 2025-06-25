@@ -18,7 +18,8 @@ layout: default
 			<div class="tags-list">
 			  Categories&nbsp;&nbsp;|&nbsp;&nbsp;
     			  {% for tag in all_tags %}
-      			    <a class="tag-button" href="{{ site.baseurl }}/blogs/{{ tag | downcase | replace: ' ', '-' }}">{{ tag }}&nbsp;&nbsp;</a>
+      			    <a class="tag-button" href="{{site.baseurl}}/{{current_section}}/{{tag | downcase | replace: ' ', '-'}}"
+>{{ tag }}&nbsp;&nbsp;</a>
     			  {% endfor %}
   			</div>
 

@@ -22,6 +22,9 @@ BS in Computer Science (GPA: 4.18/4.5)<br>
 Berkeley Global Access Program<br>
 <br>
 #### Research Experience
+**The Computation and Language Lab, UC Berkeley**<br>
+*May 2025 - Aug 2025*<br>
+Research Intern (Advisor: Prof. Steven Piantadosi)<br>
 **Brain Machine Intelligence Lab, KAIST**<br>
 *Sep 2024 - Dec 2024*<br>
 Research Intern (Advisor: Prof. Sang Wan Lee)<br>
