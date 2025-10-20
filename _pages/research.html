@@ -4,16 +4,12 @@ title: "Research"
 permalink: /research/
 author_profile: true
 ---
-
-{% if site.author.googlescholar %}
-  <div class="wordwrap">You can also find my articles on <a href="{{site.author.googlescholar}}">my Google Scholar profile</a>.</div>
-{% endif %}
-
 {% include base_path %}
 
 <!-- New style rendering if publication categories are defined -->
 {% if site.research_category %}
   {% for category in site.research_category  %}
+	<div class="wordwrap">haha</div>
     {% assign title_shown = false %}
     {% for post in site.research reversed %}
       {% if post.category != category[0] %}

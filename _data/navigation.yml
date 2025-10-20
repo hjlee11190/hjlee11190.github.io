@@ -16,7 +16,7 @@ main:
     url: /blogs/
     
   - title: "CV"
-    url: /cv/
+    url: /assets/cv.pdf
     
   # - title: "CV"
   #   url: /cv-json/

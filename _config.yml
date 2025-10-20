@@ -24,7 +24,7 @@ repository               : "hjlee11190.github.io"
 author:
   # Biographic information
   avatar           : "profile.png"
-  name             : "Lee's Webpage"
+  name             : "Hyo-jeong Lee"
   pronouns         : # example: "she/her"  
   bio              : "Undergraduate Researcher | Computational Neuroscience & Cognitive Neuroscience"
   location         : "Gwangju, South Korea"
@@ -43,8 +43,8 @@ author:
 research_category:
   #books:
     #title: 'Books'
-  #manuscripts:
-    #title: 'Journal Articles'    
+  preprints:
+    title: 'Preprints'    
   conferences:
     title: 'Conference'
 
