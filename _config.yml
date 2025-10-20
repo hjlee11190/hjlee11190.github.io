@@ -46,7 +46,7 @@ research_category:
   preprints:
     title: 'Preprints'    
   conferences:
-    title: 'Conference'
+    title: 'Conferences'
 
 # Site Settings
 teaser                   :  # filename of teaser fallback teaser image placed in /images/ for social media previews
