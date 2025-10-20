@@ -9,7 +9,7 @@
 # Basic Site Settings
 locale                   : "en-US"
 site_theme               : "default" # Currently available options are "default", "air"
-title                    : "Hyo-jeong Lee"
+title                    : "Home"
 title_separator          : "-"
 name                     : &name "Hyo-jeong Lee"
 description              : &description "Hyo-jeong Lee's personal website"   # Update this with a general description of your site, this is the default if not overridden by a page
@@ -28,7 +28,7 @@ author:
   pronouns         : # example: "she/her"  
   bio              : "Undergraduate Researcher | Computational Neuroscience & Cognitive Neuroscience"
   location         : "Gwangju, South Korea"
-  employer         : "Gwangju Institute of Science and Technology"
+  employer         : "GIST"
   uri              : # URL
   email            : "hyojeonglee11190@gmail.com" 
 
@@ -91,23 +91,6 @@ google_site_verification :
 bing_site_verification   :
 alexa_site_verification  :
 yandex_site_verification :
-
-
-# Social Sharing
-twitter:
-  username               : &twitter
-facebook:
-  username               :
-  app_id                 :
-  publisher              :
-og_image                 :  # Social media default site image
-og_description           :  # Social media default site image description
-# For specifying social profiles
-# - https://developers.google.com/structured-data/customize/social-profiles
-social:
-  type                   : # Person or Organization (defaults to Person)
-  name                   : # If the user or organization name differs from the site's name
-  links: # An array of links to social media profiles
 
 
 # Analytics
