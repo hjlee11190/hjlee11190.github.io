@@ -17,9 +17,3 @@ main:
     
   - title: "CV"
     url: /assets/cv.pdf
-    
-  # - title: "CV"
-  #   url: /cv-json/
-    
-  - title: "Guide"
-    url: /markdown/
