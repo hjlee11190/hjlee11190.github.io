@@ -8,35 +8,22 @@
 
 <div class="{{ include.type | default: "list" }}__item">
   <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
-
-    {% if post.collection == "research" %}
-      {% if post.header.teaser %}
-        {% capture teaser %}{{ post.header.teaser }}{% endcapture %}
-      {% else %}
-        {% assign teaser = site.teaser %}
-      {% endif %}
-
-      {% if include.type == "grid" and teaser %}
-        <div class="archive__item-teaser">
-          <img src=
-            {% if teaser contains "://" %}
-              "{{ teaser }}"
-            {% else %}
-              "{{ teaser | prepend: "/images/" | prepend: base_path }}"
-            {% endif %}
-            alt="">
-        </div>
-      {% endif %}
-    {% endif %}
-
-    <h2 class="archive__item-title" itemprop="headline">
-      <a href="{{ base_path }}{{ post.url }}" rel="permalink">{{ title }}</a>
-    </h2>
-
+    
+    <!-- 이미지를 excerpt와 함께 표시하도록 수정 -->
     {% if post.excerpt %}
-      <p class="archive__item-excerpt" itemprop="description">
-        {{ post.excerpt | markdownify | remove: '<p>' | remove: '</p>' }}
-      </p>
+      <div class="archive__item-content">
+        <h2 class="archive__item-title" itemprop="headline">
+          <a href="{{ base_path }}{{ post.url }}" rel="permalink">{{ title }}</a>
+        </h2>
+        
+        <p class="archive__item-excerpt" itemprop="description">
+          {{ post.excerpt | markdownify | remove: '<p>' | remove: '</p>' }}
+        </p>
+      </div>
+    {% else %}
+      <h2 class="archive__item-title" itemprop="headline">
+        <a href="{{ base_path }}{{ post.url }}" rel="permalink">{{ title }}</a>
+      </h2>
     {% endif %}
 
   </article>

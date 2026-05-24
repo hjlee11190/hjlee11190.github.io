@@ -9,9 +9,9 @@
 # Basic Site Settings
 locale                   : "en-US"
 site_theme               : "default" # Currently available options are "default", "air"
-title                    : "Hyo-jeong Lee"
+title                    : "Tiffany Lee"
 title_separator          : "-"
-name                     : &name "Hyo-jeong Lee"
+name                     : &name "Tiffany Lee"
 description              : &description "Personal website"   # Update this with a general description of your site, this is the default if not overridden by a page
 url                      : https://hjlee11190.github.io # The base hostname & protocol for your site e.g. "https://[your GitHub username].github.io",
                                                            # or if you already have some other page hosted on Github then use "https://[your GitHub username].github.io/[Your Repo Name]"
@@ -24,7 +24,7 @@ repository               : "hjlee11190.github.io"
 author:
   # Biographic information
   avatar           : "profile.png"
-  name             : "Hyo-jeong Lee"
+  name             : "Hyo-jeong (Tiffany) Lee"
   bio              : "Undergraduate Researcher | Computational Neuroscience & Cognitive Neuroscience"
   email            : "hyojeonglee11190@gmail.com" 
 
@@ -223,7 +223,6 @@ plugins:
   - jekyll-feed
   - jekyll-gist
   - jekyll-paginate
-  - jekyll-sitemap
   - jekyll-redirect-from
   - jemoji
 
@@ -232,7 +231,6 @@ whitelist:
   - jekyll-feed
   - jekyll-gist
   - jekyll-paginate
-  - jekyll-sitemap
   - jekyll-redirect-from
   - jemoji
 

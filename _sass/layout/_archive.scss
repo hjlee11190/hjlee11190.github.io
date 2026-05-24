@@ -243,3 +243,30 @@
     }
   }
 }
+
+.archive__item {
+  display: flex;
+  align-items: flex-start;
+  gap: 2em;
+  padding: 1.5em;
+  border: 1px solid var(--global-border-color);
+  border-radius: $border-radius;
+}
+
+.archive__item-content {
+  flex: 1;
+}
+
+.archive__item-teaser {
+  flex-shrink: 0;
+  width: 250px;
+  height: 200px;
+  border-radius: $border-radius;
+  overflow: hidden;
+  
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
