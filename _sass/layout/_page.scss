@@ -20,7 +20,7 @@
   @include breakpoint($large) {
     @include span(10 of 12 last);
     @include prefix(0.5 of 12);
-    @include suffix(2 of 12);
+    @include suffix(1 of 12);
   }
 
   .page__inner-wrap {
@@ -37,6 +37,7 @@
 .page__title {
   margin-top: 0;
   line-height: 1;
+  font-weight: normal;
 
   & + .page__meta {
     margin-top: -0.5em;
@@ -234,6 +235,10 @@
   a {
     color: inherit;
   }
+}
+
+.page__date {
+  font-size: $type-size-6;
 }
 
 .page__meta-title {
