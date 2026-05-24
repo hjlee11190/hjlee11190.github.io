@@ -9,7 +9,6 @@
 <div class="{{ include.type | default: "list" }}__item">
   <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
     
-    <!-- 이미지를 excerpt와 함께 표시하도록 수정 -->
     {% if post.excerpt %}
       <div class="archive__item-content">
         <h2 class="archive__item-title" itemprop="headline">
@@ -24,6 +23,12 @@
       <h2 class="archive__item-title" itemprop="headline">
         <a href="{{ base_path }}{{ post.url }}" rel="permalink">{{ title }}</a>
       </h2>
+    {% endif %}
+
+    {% if post.header.teaser %}
+      <div class="archive__item-teaser">
+        <img src="{{ base_path }}{{ post.header.teaser }}" alt="{{ title }}">
+      </div>
     {% endif %}
 
   </article>
