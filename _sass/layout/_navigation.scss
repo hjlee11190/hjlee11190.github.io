@@ -25,7 +25,7 @@
   }
 
   @include breakpoint($x-large) {
-    max-width: $x-large;
+    max-width: $content-width-wide;
   }
 
   ol {
@@ -180,7 +180,7 @@
   a {
     display: block;
     margin: 0 1rem;
-    padding: 0.5rem 0;
+    padding: 0.9rem 0 0.1rem;
     color: var(--global-masthead-link-color);
     text-decoration: none;
 
@@ -204,13 +204,13 @@
 
   .visible-links {
     display: table;
+    margin-left: auto; /* right-align the nav within the masthead */
 
     li {
       display: table-cell;
       vertical-align: middle;
 
       &:first-child {
-        font-weight: bold;
         text-wrap: wrap;
 
         a {
@@ -236,6 +236,23 @@
 
     a {
       position: relative;
+      text-align: center;
+
+      /* Reserve the bold width up front (invisible copy of the label) so the
+         hover/active bolding below doesn't reflow the rest of the nav. */
+      &::after {
+        content: attr(data-title);
+        display: block;
+        height: 0;
+        overflow: hidden;
+        visibility: hidden;
+        font-weight: 700;
+        pointer-events: none;
+      }
+
+      &:hover {
+        font-weight: 700;
+      }
 
       &:before {
         content: "";
@@ -257,6 +274,11 @@
             -ms-transform: scaleX(1);
                 transform: scaleX(1); /* reveal*/
       }
+    }
+
+    /* Current page */
+    .masthead__menu-item--active a {
+      font-weight: 700;
     }
   }
 

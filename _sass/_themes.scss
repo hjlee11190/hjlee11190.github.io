@@ -15,7 +15,7 @@ $indent-var                 : 1.3em;
 
 /* System typefaces */
 $serif                      : Georgia, Times, serif;
-$sans-serif                 : -apple-system, ".SFNSText-Regular", "San Francisco", "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", Arial, sans-serif;
+$sans-serif                 : "Lato", -apple-system, ".SFNSText-Regular", "San Francisco", "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", Arial, sans-serif;
 $monospace                  : Monaco, Consolas, "Lucida Console", monospace;
 
 /* Sans serif typefaces */
@@ -41,7 +41,7 @@ $type-size-8                : 0.625em;  // ~10px
 
 $global-font-family         : $sans-serif;
 $header-font-family         : $sans-serif;
-$caption-font-family        : $serif;
+$caption-font-family        : $sans-serif;
 
 /* ==========================================================================
    Breakpoints
@@ -54,6 +54,16 @@ $medium                     : 768px !default;
 $medium-wide                : 900px !default;
 $large                      : 925px !default;
 $x-large                    : 1280px !default;
+
+/* ==========================================================================
+   Content width
+   ========================================================================== */
+
+/* Width of the content column (sidebar + body). These are separate from the
+   breakpoint values above so the outer margins can be widened without moving
+   the responsive breakpoints. Lower them to get wider margins. */
+$content-width              : 850px;   /* below $x-large (Susy container) */
+$content-width-wide         : 1150px;  /* at $x-large and up */
 
 /* ==========================================================================
    Grid
@@ -70,7 +80,7 @@ $susy: (
     math: fluid,
     output: float,
     gutter-position: after,
-    container: $large,
+    container: $content-width,
     global-box-sizing: border-box,
 );
 

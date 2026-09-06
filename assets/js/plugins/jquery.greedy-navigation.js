@@ -58,14 +58,15 @@ function updateNav() {
   // Keep counter updated
   $btn.attr("count", breaks.length);
 
-  // update masthead height and the body/sidebar top padding
+  // update masthead height and the body top padding
   var mastheadHeight = $('.masthead').height();
   $('body').css('padding-top', mastheadHeight + 'px');
-  if ($(".author__urls-wrapper button").is(":visible")) {
-    $(".sidebar").css("padding-top", "");
-  } else {
-    $(".sidebar").css("padding-top", mastheadHeight + "px");
-  }
+
+  // NOTE: the sidebar used to get `padding-top: mastheadHeight` here, back when
+  // it was `position: fixed` and therefore had to clear the fixed masthead on
+  // its own. It is `position: sticky` now (see _sass/layout/_sidebar.scss), so
+  // it sits inside the flow below the body padding already set above -- adding
+  // the padding here too pushed the profile down by a full masthead height.
 
 }
 

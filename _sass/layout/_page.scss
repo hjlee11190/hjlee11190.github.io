@@ -12,13 +12,13 @@
   animation-delay: 0.35s;
 
   @include breakpoint($x-large) {
-    max-width: $x-large;
+    max-width: $content-width-wide;
   }
 }
 
 .page {
   @include breakpoint($large) {
-    @include span(10 of 12 last);
+    @include span(9 of 12 last);
     @include prefix(0.5 of 12);
     @include suffix(1 of 12);
   }
@@ -131,7 +131,7 @@
       padding-right: 1em;
 
       @include breakpoint($x-large) {
-        max-width: $x-large;
+        max-width: $content-width-wide;
       }
     }
 

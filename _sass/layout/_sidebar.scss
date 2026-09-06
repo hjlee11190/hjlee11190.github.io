@@ -18,14 +18,20 @@
   }
 
   @media screen and (min-width: $sidebar-screen-min-width) {
-    height: 100vh;
+    /* Keep the profile in view while the page scrolls.
+       This must be `sticky`, not `fixed`: a fixed element leaves the float
+       layout, so the Susy `span(3 of 12)` width above resolves against the
+       viewport instead of #main and the sidebar grows past the gutter the
+       content column reserves for it -- overlapping the text on wide screens. */
+    position: -webkit-sticky;
+    position: sticky;
+    top: $masthead-height;
+    max-height: calc(100vh - #{$masthead-height});
     overflow-y: auto;               // Add scrollbar if the sidebar is too long
-    position: fixed;
-    padding-top: $masthead-height;
   }
 
   @include breakpoint($large) {
-    @include span(2 of 12);
+    @include span(3 of 12);
     opacity: 1;
     -webkit-transition: opacity 0.2s ease-in-out;
             transition: opacity 0.2s ease-in-out;
@@ -245,6 +251,15 @@
 
   li {
     white-space: nowrap;
+
+    /* In the sidebar column the list is only ~2 grid columns wide, so a long
+       link (an email address) would overflow. `overflow-y: auto` on .sidebar
+       forces overflow-x to `auto` as well, which would show a horizontal
+       scrollbar, so wrap instead. */
+    @include breakpoint($large) {
+      white-space: normal;
+      overflow-wrap: break-word;
+    }
   }
 
   a {
