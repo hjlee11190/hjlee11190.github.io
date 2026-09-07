@@ -288,9 +288,9 @@
     right: 0;
     margin-top: 15px;
     padding: 5px;
-    border: 1px solid var(--global-border-color);
+    border: 1px solid var(--global-masthead-bg-color);
     border-radius: $border-radius;
-    background: var(--global-bg-color);
+    background: var(--global-masthead-bg-color);
     box-shadow: 0 0 10px rgba(#000, 0.25);
 
     a {
@@ -298,13 +298,13 @@
       padding: 10px 20px;
       font-size: $type-size-5;
 
-      /* This panel sits on the page background, not on the bar, so it can't
-         inherit the masthead's (white) link colour. */
-      color: var(--global-text-color);
+      /* The panel carries the masthead's own background, so it uses the same
+         white link colour as the bar the menu button sits in. */
+      color: var(--global-masthead-link-color);
 
       &:hover {
-        color: var(--global-link-color-hover);
-        background: var(--global-border-color);
+        color: var(--global-masthead-link-color-hover);
+        background: rgba(#fff, 0.12);
       }
     }
 
@@ -316,7 +316,7 @@
       width: 0;
       border-style: solid;
       border-width: 0 10px 10px;
-      border-color: var(--global-border-color) transparent;
+      border-color: var(--global-masthead-bg-color) transparent;
       display: block;
       z-index: 0;
     }
@@ -329,14 +329,14 @@
       width: 0;
       border-style: solid;
       border-width: 0 10px 10px;
-      border-color: var(--global-bg-color) transparent;
+      border-color: var(--global-masthead-bg-color) transparent;
       display: block;
       z-index: 1;
     }
 
     li {
       display: block;
-      border-bottom: 1px solid var(--global-border-color);
+      border-bottom: 1px solid rgba(#fff, 0.2);
 
       &:last-child {
         border-bottom: none;

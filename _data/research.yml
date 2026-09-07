@@ -16,37 +16,35 @@
 
 - title: "Modeling internal representations in task-trained RNNs with cognitive states"
   authors: "**Lee, H.**, & Piantadosi, S. T."
-  venue: "#Cognition #RNN #State-space #Subspace | Manuscript in progress"
+  venue: "#Cognition #RNN #State-space #Subspace"
   image: research/research_rnn.png
   description: >
-    Replace this with a short summary of the work -- a few sentences on the
-    question, the approach and what you found. Markdown works here, so
-    **bold**, *italics* and [links](https://example.com) are all fine.
+    In this work, we analyzed the internal representations of task-trained RNNs using deterministic epsilon states, identifying a state variable that is causally related to model output. *(Manuscript in progress)* 
 
 - title: "Motif-based hierarchical rule inference"
   authors: "**Lee, H.**, & Chung, E."
-  venue: "#Cognition #Dynamics #RNN | KOSOMBE Spring 2026 & Society for Neuroscience 2026"
+  venue: "#Cognition #Dynamics #RNN"
   image: research/research_motif.png
   description: >
-    Replace this with a short summary of the work.
+    This project proposed how we efficiently infer unknown task rules by organizing similar rule hypotheses into a hierarchical structure rather than evaluating them independently. We supported the hypothesis with neural dynamic motifs in RNNs' internal representations. *(Presented at KOSOMBE Spring 2026 & Society for Neuroscience 2026)*
 
 - title: "Spectral graph theoretical characterization of cortical neuronal networks"
   authors: "**Lee, H.**, Ashiquzzaman, A., Kwon, H. S., Kim, Y. R., Kim, S. S., & Chung, E."
-  venue: "#Dynamics #MEA #SNN | KOSOMBE Fall 2025 & Manuscript in preparation"
+  venue: "#Dynamics #MEA #SNN"
   image: research/research_sgt.png
   description: >
-    Replace this with a short summary of the work.
+    The research used spectral graph theory to characterize network-level changes in cortical neuronal networks across disease-related treatments and developmental stages. *(Presented at KOSOMBE Fall 2025 & Manuscript in preparation)*
 
 - title: "Shared trial-to-trial variability and readout alignment in older adults"
   authors: "**Lee, H.**, & Chung, E."
-  venue: "#Cognition #Dynamics #EEG #Subspace | ISA 2025"
+  venue: "#Cognition #Dynamics #EEG #Subspace"
   image: research/research_shared_var.png
   description: >
-    Replace this with a short summary of the work.
+    This project compared shared trial-to-trial variability between younger and older adults, focusing on its magnitude, variance, and alignment with behaviorally relevant readout axes. The findings highlight the importance role of sensory encoding to account for age-related cognitive decline. *(Presented at ISA 2025)*
 
 - title: "Deepfake discrimination task with label alteration"
   authors: "**Lee, H.**, Kim, H., & Jun, S. C."
   venue: "#Cognition #EEG"
   image: research/research_deepfake.png
   description: >
-    Replace this with a short summary of the work.
+    This study examined how manipulating real/fake labels influences behavioral performance and EEG responses during deepfake image discrimination.

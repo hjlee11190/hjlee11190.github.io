@@ -9,10 +9,10 @@
 }
 
 .research-item {
-  /* Whitespace alone separates one project from the next -- 4em is the former
-     2em margin plus 2em padding, so removing the divider rule left the gap
-     between entries unchanged. */
-  margin-bottom: 4em;
+  /* Whitespace alone separates one project from the next; each entry ends in a
+     figure, so it needs enough of a gap to read as a break without the entries
+     drifting apart. */
+  margin-bottom: 2.5em;
 
   &:last-child {
     margin-bottom: 0;
