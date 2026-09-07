@@ -9,6 +9,12 @@ $darker-gray                : mix(#000, $gray, 60%);
 $light-gray                 : mix(#fff, $gray, 50%);
 $lighter-gray               : mix(#fff, $gray, 90%);
 
+/* Site palette */
+$wine                       : #6b1626;   /* masthead / navigation bar */
+$page-bg                    : #f5f5f5;   /* page background - neutral light gray */
+$page-bg-dark               : mix(#000, $page-bg, 5%);  /* footer */
+$accent                     : #9c2b3b;   /* links */
+
 /* Color codes used for the site */
 $danger-color               : #ee5f5b;
 $info-color                 : #2f7f93;
@@ -29,18 +35,19 @@ $sidebar-screen-min-width   : 1024px;
 /* Default light theme for the site */
 :root {
     --global-base-color                 : #{$gray};
-    --global-bg-color                   : #fff;
-    --global-footer-bg-color            : #f2f3f3;
+    --global-bg-color                   : #{$page-bg};
+    --global-masthead-bg-color          : #{$wine};
+    --global-footer-bg-color            : #{$page-bg-dark};
     --global-border-color               : #{$lighter-gray};
     --global-dark-border-color          : #bdc1c4;
     --global-code-background-color      : #fafafa;
     --global-code-text-color            : #{$darker-gray};
     --global-fig-caption-color          : mix(#fff,  #{$dark-gray}, 25%);
-    --global-link-color                 : #52adc8;
-    --global-link-color-hover           : mix(#000, #2f7f93, 25%);
-    --global-link-color-visited         : mix(#fff, #2f7f93, 25%);  
-    --global-masthead-link-color        : #{$dark-gray};
-    --global-masthead-link-color-hover  : mix(#000, #{$gray}, 25%);    
+    --global-link-color                 : #{$accent};
+    --global-link-color-hover           : #{mix(#000, $accent, 25%)};
+    --global-link-color-visited         : #{mix(#fff, $accent, 25%)};
+    --global-masthead-link-color        : #fff;
+    --global-masthead-link-color-hover  : #{mix(#fff, $wine, 65%)};
     --global-text-color                 : #{$dark-gray};
     --global-text-color-light           : #{$light-gray};
     --global-thead-color                : #{$lighter-gray};

@@ -1,0 +1,63 @@
+{% comment %}
+  Research list for the Research page. Sourced from _data/research.yml, so
+  adding a project means adding a block to that file -- there is no per-topic
+  page to create and no navigation to update.
+
+  Each entry stacks title -> authors/venue -> description -> figure, at full
+  content width. Entries without an `image` simply render without a figure.
+{% endcomment %}
+
+{% include base_path %}
+
+{% if site.data.research and site.data.research.size > 0 %}
+  {% assign research_items = site.data.research | sort: "date" | reverse %}
+
+  <div class="research-list">
+    {% for item in research_items %}
+      <article class="research-item">
+        <h2 class="research-item__title">{{ item.title }}</h2>
+
+        {% if item.authors %}
+          <p class="research-item__authors">
+            {{ item.authors | markdownify | remove: "<p>" | remove: "</p>" }}
+          </p>
+        {% endif %}
+
+        {% if item.venue or item.date %}
+          <p class="research-item__venue">
+            {{ item.venue }}{% if item.venue and item.date %} &middot; {% endif %}
+            {% if item.date %}{{ item.date | date: "%b %Y" }}{% endif %}
+          </p>
+        {% endif %}
+
+        {% if item.links and item.links.size > 0 %}
+          <p class="research-item__links">
+            {% for link in item.links %}
+              <a href="{{ link.url }}">{{ link.label }}</a>
+            {% endfor %}
+          </p>
+        {% endif %}
+
+        {% if item.description %}
+          <div class="research-item__description">
+            {{ item.description | markdownify }}
+          </div>
+        {% endif %}
+
+        {% if item.image %}
+          <figure class="research-item__figure">
+            <img src="{{ base_path }}/images/{{ item.image }}"
+                 alt="{{ item.image_alt | default: item.title }}"
+                 loading="lazy"
+                 decoding="async">
+            {% if item.image_caption %}
+              <figcaption>{{ item.image_caption | markdownify | remove: "<p>" | remove: "</p>" }}</figcaption>
+            {% endif %}
+          </figure>
+        {% endif %}
+      </article>
+    {% endfor %}
+  </div>
+{% else %}
+  <p><em>No research entries in <code>_data/research.yml</code> yet.</em></p>
+{% endif %}

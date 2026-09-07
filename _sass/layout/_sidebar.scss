@@ -252,6 +252,11 @@
   li {
     white-space: nowrap;
 
+    /* Global `ul li` sets margin-bottom: 0.5em; the profile links sit closer
+       together than body-copy list items, so clear it and let the `a` margin
+       below control the spacing. */
+    margin-bottom: 0;
+
     /* In the sidebar column the list is only ~2 grid columns wide, so a long
        link (an email address) would overflow. `overflow-y: auto` on .sidebar
        forces overflow-x to `auto` as well, which would show a horizontal
@@ -264,10 +269,10 @@
 
   a {
     display: block;
-    margin-bottom: 5px;
+    margin-bottom: 3px;
     padding-right: 5px;
-    padding-top: 2px;
-    padding-bottom: 2px;
+    padding-top: 1px;
+    padding-bottom: 1px;
     color: inherit;
     font-size: $type-size-5;
     text-decoration: none;

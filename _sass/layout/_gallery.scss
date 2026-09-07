@@ -1,0 +1,30 @@
+/* ==========================================================================
+   PHOTO GALLERY
+   ========================================================================== */
+
+.gallery-grid {
+  display: grid;
+  /* Fixed three-column grid at every width -- the tiles are square, so they
+     just scale down together rather than reflowing into a different count. */
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.75rem;
+  margin: 1.5em 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.gallery-grid__item {
+  margin: 0;
+  padding: 0;
+  line-height: 0;   // kills the inline-image descender gap
+  list-style: none;
+
+  img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 1 / 1;   // uniform square grid
+    object-fit: cover;     // fill the square, cropping the long side
+    border-radius: $border-radius;
+    background: var(--global-border-color);   // placeholder while lazy-loading
+  }
+}

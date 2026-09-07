@@ -1,0 +1,10 @@
+# News entries shown at the bottom of the About page (_includes/news.html).
+#
+# Newest first is handled automatically -- entries are sorted by `date`, so the
+# order in this file does not matter. Keep `date` as a quoted "YYYY-MM-DD"
+# string. `text` accepts Markdown, so links and *emphasis* work.
+#
+# The News section disappears entirely when this list is empty.
+
+- date: "2026-08-22"
+  text: "My abstract got accepted to [Neuroscience 2026](https://www.sfn.org/meetings/neuroscience-2026) with Trainee Professional Development Award!"

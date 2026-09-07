@@ -11,7 +11,7 @@
 
   @include breakpoint($large) {
     @include span(9 of 12 last);
-    @include prefix(0.5 of 12);
+    @include prefix(0.125 of 12);
   }
 
   a {
@@ -45,8 +45,15 @@
   font-size: $type-size-5;
 
   a {
-    font-weight: normal;
+    /* Reads as a heading, not as a link, until you point at it. */
+    color: var(--global-text-color);
+    font-weight: bold;
     text-decoration: none;
+
+    &:hover {
+      color: var(--global-link-color);
+      text-decoration: underline;
+    }
   }
 
   a + a {
@@ -80,10 +87,16 @@
   }
 }
 
+/* Hovering anywhere on the card highlights its title -- same treatment as
+   hovering the title link itself (see .archive__item-title a:hover above).
+   This selector is more specific than that one, so it has to repeat the rule
+   rather than rely on it. */
 .archive__item:hover {
   .archive__item-title {
     a {
-      text-decoration: underline;    }
+      color: var(--global-link-color);
+      text-decoration: underline;
+    }
   }
 }
 

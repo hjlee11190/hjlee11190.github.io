@@ -5,7 +5,7 @@
 #main {
   @include container;
   @include clearfix;
-  margin-top: 2em;
+  margin-top: 4em;
   padding-left: 1em;
   padding-right: 1em;
   animation: intro 0.3s both;
@@ -19,7 +19,7 @@
 .page {
   @include breakpoint($large) {
     @include span(9 of 12 last);
-    @include prefix(0.5 of 12);
+    @include prefix(0.125 of 12);
     @include suffix(1 of 12);
   }
 
@@ -399,4 +399,45 @@
   margin-bottom: 10px;
   font-size: $type-size-6;
   text-transform: uppercase;
+}
+
+
+/* ==========================================================================
+   NEWS LIST (About page, fed by _data/news.yml)
+   ========================================================================== */
+
+/* Sits apart from the intro above it, and without the rule that .page__content
+   puts under every other h2. */
+.page__content h2.news-heading {
+  margin-top: 3em;
+  margin-bottom: 0.4em;
+  padding-bottom: 0;
+  border-bottom: none;
+}
+
+.news-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.news-list__item {
+  display: flex;
+  gap: 0.75em;
+  margin-bottom: 0.25em;
+  font-size: 0.95em;
+  line-height: 1.5;
+
+  &:last-child {
+    margin-bottom: 0;   // no trailing gap under the section
+  }
+}
+
+.news-list__date {
+  flex: 0 0 5.5em;   // fixed column so the entries line up
+  /* --global-text-color-light is only ~1.8:1 against the page background, which
+     is too faint to read; --global-base-color stays muted but stays legible. */
+  color: var(--global-base-color);
+  font-weight: bold;
+  white-space: nowrap;
 }

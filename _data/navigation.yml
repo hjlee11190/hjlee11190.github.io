@@ -16,6 +16,9 @@ main:
 
   - title: "Blogs"
     url: /blogs/
+
+  - title: "Personal"
+    url: /personal/
     
   - title: "CV"
     url: /files/cv.pdf

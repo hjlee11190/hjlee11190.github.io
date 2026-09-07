@@ -1,0 +1,92 @@
+/* ==========================================================================
+   RESEARCH LIST (Research page, fed by _data/research.yml)
+   ========================================================================== */
+
+.research-list {
+  /* Breathing room under the "Research" page heading, which sits tight to the
+     content by default. */
+  margin: 2.5em 0 0;
+}
+
+.research-item {
+  /* Whitespace alone separates one project from the next -- 4em is the former
+     2em margin plus 2em padding, so removing the divider rule left the gap
+     between entries unchanged. */
+  margin-bottom: 4em;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.research-item__title {
+  margin: 0 0 0.35em;
+  padding-bottom: 0;
+  border-bottom: none;
+  font-size: 1.1em;
+  line-height: 1.35;
+}
+
+.research-item__authors {
+  margin: 0 0 0.15em;
+  font-size: 0.85em;
+  line-height: 1.5;
+}
+
+.research-item__venue {
+  margin: 0;
+  /* --global-text-color-light is only ~1.8:1 against the page background, too
+     faint to read; --global-base-color stays muted but stays legible. */
+  color: var(--global-base-color);
+  font-size: 0.8em;
+  font-style: italic;
+  line-height: 1.5;
+}
+
+.research-item__links {
+  margin: 0.5em 0 0;
+  font-size: 0.85em;
+
+  a + a {
+    margin-left: 1em;
+  }
+}
+
+.research-item__description {
+  margin-top: 0.5em;
+  font-size: 0.9em;
+  line-height: 1.45;
+
+  p {
+    margin-bottom: 0.75em;
+  }
+
+  /* The first paragraph's own top margin collapses through this div and wins,
+     so the margin-top above only takes effect once it is zeroed out. */
+  > :first-child {
+    margin-top: 0;
+  }
+
+  > :last-child {
+    margin-bottom: 0;
+  }
+}
+
+.research-item__figure {
+  margin: 1.5em 0 0;
+
+  img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: $border-radius;
+    background: var(--global-border-color);   // placeholder while lazy-loading
+  }
+
+  figcaption {
+    margin-top: 0.5em;
+    color: var(--global-fig-caption-color);
+    font-size: 0.8em;
+    line-height: 1.5;
+  }
+}

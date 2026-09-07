@@ -25,7 +25,7 @@ author:
   # Biographic information
   avatar           : "profile.png"
   name             : "Hyo-jeong (Tiffany) Lee"
-  bio              : "Undergraduate Researcher | Computational Neuroscience & Cognitive Neuroscience"
+  bio              : "Undergraduate Researcher | Computational Cognitive Neuroscience"
   email            : "hyojeonglee11190@gmail.com" 
 
   # Repositories and software development
@@ -75,6 +75,11 @@ include:
   - _pages
   - files
 exclude:
+  # Full-resolution photo originals, banked by scripts/optimize-images.py.
+  # Kept in the repo but never published -- only the resized copies alongside
+  # them are served.
+  - images/personal/_originals
+  - scripts
   - "*.sublime-project"
   - "*.sublime-workspace"
   - .asset-cache
@@ -133,9 +138,6 @@ collections:
   blogs:
     output: true
     permalink: /:collection/:path/
-  research:
-    output: true
-    permalink: /:collection/:path/
 
 
 # These settings control how pages and collections are included in the site
@@ -158,15 +160,6 @@ defaults:
     values:
       layout: single
       author_profile: true
-  # _research
-  - scope:
-      path: ""
-      type: research
-    values:
-      layout: single
-      author_profile: true
-      share: true
-      comments: false
   # _blogs
   - scope:
       path: ""

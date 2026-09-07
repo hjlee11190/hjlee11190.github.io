@@ -1,0 +1,72 @@
+# Research entries shown on the Research page (_includes/research.html).
+#
+# Newest first is handled automatically -- entries are sorted by `date`, so the
+# order in this file does not matter. Keep `date` as a quoted "YYYY-MM-DD"
+# string.
+#
+# Fields, all optional except `title`:
+#   title       plain text
+#   authors     Markdown, so **Lee, H.** bolds your own name
+#   venue       conference / journal line, shown under the authors
+#   date        "YYYY-MM-DD"; only the year+month is displayed
+#   description Markdown; use a `>` block for multiple paragraphs
+#   image       path under images/, e.g. research/research_rnn.png
+#   image_alt   description of the figure, read out by screen readers
+#   links       optional list of {label, url} buttons (PDF, code, poster, ...)
+#
+# Leave `image` out and the entry simply renders without a figure.
+
+- title: "Influence of Hierarchical Task Inference on Representational Dynamics in Healthy and Aging-like RNNs under Hidden-Rule Conditions"
+  authors: "**Lee, H.**, & Chung, E."
+  venue: "The Korean Society of Medical & Biological Engineering Spring Annual Meeting [Poster]"
+  date: "2026-05-07"
+  image: research/research_rnn.png
+  image_alt: "Figure from the hierarchical task inference RNN study"
+  description: >
+    Replace this with a short summary of the work -- a few sentences on the
+    question, the approach and what you found. Markdown works here, so
+    **bold**, *italics* and [links](https://example.com) are all fine.
+
+- title: "Age-Related Reorganization of Shared Neural Variability and Readout Alignment During Cognitive Control"
+  authors: "**Lee, H.**, & Chung, E."
+  venue: "The 19th International Symposium for Aging [Poster]"
+  date: "2025-11-08"
+  image: research/research_shared_var.png
+  image_alt: "Figure from the shared neural variability study"
+  description: >
+    Replace this with a short summary of the work.
+
+- title: "Spectral Graph Theoretical Characterization of Cortical Neuronal Networks using HD-MEA"
+  authors: "**Lee, H.**, Ashiquzzaman, A., Kwon, H. S., Kim, Y. R., Kim, S. S., & Chung, E."
+  venue: "The Korean Society of Medical & Biological Engineering Fall Annual Meeting [Poster]"
+  date: "2025-11-06"
+  image: research/research_sgt.png
+  image_alt: "Figure from the spectral graph theory HD-MEA study"
+  description: >
+    Replace this with a short summary of the work.
+
+# Placeholder for the figure images/research/research_motif.png -- fill in the
+# real title, authors, venue and date, or delete this entry.
+- title: "Untitled motif project"
+  authors: "**Lee, H.**"
+  venue: "Venue [Poster]"
+  date: "2025-01-01"
+  image: research/research_motif.png
+  image_alt: "Figure from the network motif study"
+  description: >
+    Placeholder entry -- replace the title, authors, venue, date and this
+    description, or delete the entry if the figure is not needed.
+
+# Placeholder for the figure images/research/research_deepfake.png -- fill in the
+# real title, authors, venue and date, or delete this entry.
+# From the CV: BioComputing Lab, GIST (Advisor: Prof. Sung Chan Jun), Jun-Aug 2024
+# -- "how label manipulation alters EEG neural correlates of deepfake discrimination".
+- title: "Untitled deepfake project"
+  authors: "**Lee, H.**"
+  venue: "Venue [Poster]"
+  date: "2024-08-01"
+  image: research/research_deepfake.png
+  image_alt: "Figure from the deepfake discrimination EEG study"
+  description: >
+    Placeholder entry -- replace the title, authors, venue, date and this
+    description, or delete the entry if the figure is not needed.

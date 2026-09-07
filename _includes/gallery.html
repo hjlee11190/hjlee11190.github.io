@@ -1,0 +1,51 @@
+{% comment %}
+  Photo grid built straight from a folder of static files -- drop an image into
+  the folder and it appears, with no list to maintain.
+
+    {% include gallery.html dir="images/personal" %}
+
+  Files in sub-folders of `dir` are included too, so photos can be grouped on
+  disk without changing this call.
+
+  Only browser-renderable raster formats are listed, matched on file extension.
+  Browsers decide format from the file's actual bytes rather than its name, so a
+  mislabelled file (a HEIC renamed to .png, say) can still slip through; the
+  onerror handler drops any tile whose image fails to decode instead of leaving
+  a broken-image icon in the grid.
+
+  Tiles are plain images -- they are deliberately not links, so clicking one
+  does nothing.
+{% endcomment %}
+
+{% include base_path %}
+
+{% assign gallery_dir = include.dir | default: "images/personal" %}
+{% assign gallery_path = gallery_dir | prepend: "/" | append: "/" %}
+{% assign gallery_exts = ".jpg,.jpeg,.png,.gif,.webp,.avif,.svg" | split: "," %}
+
+{% assign gallery_files = site.static_files | where_exp: "f", "f.path contains gallery_path" | sort: "name" %}
+
+{% assign gallery_count = 0 %}
+{% for f in gallery_files %}
+  {% assign ext = f.extname | downcase %}
+  {% if gallery_exts contains ext %}{% assign gallery_count = gallery_count | plus: 1 %}{% endif %}
+{% endfor %}
+
+{% if gallery_count > 0 %}
+  <ul class="gallery-grid">
+    {% for photo in gallery_files %}
+      {% assign ext = photo.extname | downcase %}
+      {% if gallery_exts contains ext %}
+        <li class="gallery-grid__item">
+          <img src="{{ base_path }}{{ photo.path }}"
+               alt="{{ photo.basename }}"
+               loading="lazy"
+               decoding="async"
+               onerror="this.closest('.gallery-grid__item').remove()">
+        </li>
+      {% endif %}
+    {% endfor %}
+  </ul>
+{% else %}
+  <p><em>No photos in <code>{{ gallery_dir }}</code> yet.</em></p>
+{% endif %}

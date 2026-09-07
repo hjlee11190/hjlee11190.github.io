@@ -1,0 +1,19 @@
+{% comment %}
+  News list for the About page. Sourced from _data/news.yml; renders nothing at
+  all when that file is empty, so the heading never appears on its own.
+{% endcomment %}
+
+{% if site.data.news and site.data.news.size > 0 %}
+  {% assign news_items = site.data.news | sort: "date" | reverse %}
+
+  <h2 class="news-heading" id="news">News</h2>
+
+  <ul class="news-list">
+    {% for item in news_items %}
+      <li class="news-list__item">
+        <span class="news-list__date">{{ item.date | date: "%b %Y" }}</span>
+        <span class="news-list__text">{{ item.text | markdownify | remove: "<p>" | remove: "</p>" }}</span>
+      </li>
+    {% endfor %}
+  </ul>
+{% endif %}
