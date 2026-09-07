@@ -3,6 +3,9 @@
   adding a project means adding a block to that file -- there is no per-topic
   page to create and no navigation to update.
 
+  Entries render in the order they appear in that file; reorder the blocks
+  there to reorder the page.
+
   Each entry stacks title -> authors/venue -> description -> figure, at full
   content width. Entries without an `image` simply render without a figure.
 {% endcomment %}
@@ -10,10 +13,8 @@
 {% include base_path %}
 
 {% if site.data.research and site.data.research.size > 0 %}
-  {% assign research_items = site.data.research | sort: "date" | reverse %}
-
   <div class="research-list">
-    {% for item in research_items %}
+    {% for item in site.data.research %}
       <article class="research-item">
         <h2 class="research-item__title">{{ item.title }}</h2>
 
@@ -23,11 +24,8 @@
           </p>
         {% endif %}
 
-        {% if item.venue or item.date %}
-          <p class="research-item__venue">
-            {{ item.venue }}{% if item.venue and item.date %} &middot; {% endif %}
-            {% if item.date %}{{ item.date | date: "%b %Y" }}{% endif %}
-          </p>
+        {% if item.venue %}
+          <p class="research-item__venue">{{ item.venue }}</p>
         {% endif %}
 
         {% if item.links and item.links.size > 0 %}

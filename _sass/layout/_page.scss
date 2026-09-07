@@ -56,8 +56,10 @@
     border-bottom: 1px solid var(--global-border-color);
   }
 
+  /* Body copy is sized to match .research-item__description so prose reads at
+     one size across About, Personal, Blogs posts and Research. */
   p, li, dl {
-    font-size: 0.95em;
+    font-size: 0.9em;
   }
 
   /* paragraph indents */

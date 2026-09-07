@@ -5,6 +5,16 @@
 .archive {
   margin-bottom: 2em;
 
+  /* Prose written directly on an archive-layout page (Personal). Scoped to
+     direct children so the Research and Blogs listings, which render their own
+     components, keep their own sizes. */
+  > p,
+  > ul li,
+  > ol li,
+  > dl {
+    font-size: 0.9em;
+  }
+
   @include breakpoint($medium) {
     @include span(12 of 12);
   }
