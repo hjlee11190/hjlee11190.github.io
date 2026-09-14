@@ -443,3 +443,60 @@
   font-weight: bold;
   white-space: nowrap;
 }
+
+
+/* ==========================================================================
+   BLOG POSTS (_blogs collection; .page--blog is set in _layouts/single.html)
+   ========================================================================== */
+
+.page--blog {
+  /* 1.5x the default 1.3em gap between the date and the first paragraph. */
+  .page__date {
+    margin-bottom: 1.95em;
+  }
+
+  .page__content {
+    p, li {
+      text-align: justify;
+    }
+
+    /* Half the default $indent-var (1.3em) between paragraphs. */
+    p {
+      margin-bottom: 0.65em;
+    }
+  }
+}
+
+
+/* Prev / Next links at the bottom of a blog post (_layouts/single.html). */
+.post-nav {
+  @include full();   // .page__content above is floated full-width; sit below it
+  display: flex;
+  justify-content: space-between;
+  margin-top: 3.3em;
+  font-size: $type-size-5;   // same size as a ### heading in the post
+}
+
+.post-nav__link {
+  font-weight: bold;
+  color: var(--global-text-color);
+  text-decoration: none;
+
+  &:visited {
+    color: var(--global-text-color);
+  }
+
+  &:hover,
+  &:focus {
+    color: var(--global-link-color);
+    text-decoration: underline;
+  }
+
+  /* No previous/next post: muted, and no hover change. */
+  &--disabled,
+  &--disabled:hover {
+    color: var(--global-divider-color, #9fa2a4);
+    text-decoration: none;
+    cursor: default;
+  }
+}

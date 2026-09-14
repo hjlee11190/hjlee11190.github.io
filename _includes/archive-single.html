@@ -6,28 +6,49 @@
   {% assign title = post.title %}
 {% endif %}
 
+{% comment %}
+  Thumbnail: header.teaser if set, otherwise the first image in the post.
+  post.content is already rendered here, so Markdown ![]() images and raw
+  <img> tags both show up as <img ... src="...">.
+{% endcomment %}
+{% assign teaser = post.header.teaser %}
+{% unless teaser %}
+  {% assign img_parts = post.content | split: "<img" %}
+  {% if img_parts.size > 1 %}
+    {% assign src_parts = img_parts[1] | split: 'src="' %}
+    {% if src_parts.size > 1 %}
+      {% assign teaser = src_parts[1] | split: '"' | first %}
+    {% endif %}
+  {% endif %}
+{% endunless %}
+{% if teaser %}
+  {% assign teaser_head = teaser | slice: 0, 4 %}
+  {% if teaser_head != "http" %}
+    {% assign teaser = base_path | append: teaser %}
+  {% endif %}
+{% endif %}
+
 <div class="{{ include.type | default: "list" }}__item">
   <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
-    
-    {% if post.excerpt %}
-      <div class="archive__item-content">
-        <h2 class="archive__item-title" itemprop="headline">
-          <a href="{{ base_path }}{{ post.url }}" rel="permalink">{{ title }}</a>
-        </h2>
-        
-        <p class="archive__item-excerpt" itemprop="description">
-          {{ post.excerpt | markdownify | remove: '<p>' | remove: '</p>' }}
-        </p>
-      </div>
-    {% else %}
+
+    <div class="archive__item-content">
       <h2 class="archive__item-title" itemprop="headline">
         <a href="{{ base_path }}{{ post.url }}" rel="permalink">{{ title }}</a>
       </h2>
-    {% endif %}
 
-    {% if post.header.teaser %}
+      {% assign excerpt = post.excerpt | markdownify | remove: '<p>' | remove: '</p>' | strip %}
+      {% if excerpt != "" %}
+        <p class="archive__item-excerpt" itemprop="description">{{ excerpt }}</p>
+      {% endif %}
+
+      {% if include.show_date and post.date %}
+        <p class="archive__item-date"><i class="fa fa-fw fa-calendar" aria-hidden="true"></i> <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%B %d, %Y" }}</time></p>
+      {% endif %}
+    </div>
+
+    {% if teaser %}
       <div class="archive__item-teaser">
-        <img src="{{ base_path }}{{ post.header.teaser }}" alt="{{ title }}">
+        <img src="{{ teaser }}" alt="{{ title | strip_html | escape }}" loading="lazy">
       </div>
     {% endif %}
 

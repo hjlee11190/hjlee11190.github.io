@@ -2,6 +2,7 @@
 title: "[P2P] Constrained Graph Clustering"
 collection: blogs
 date: 2026-09-13
+excerpt: "Brief review of the concept covered in a journal club."
 ---
 
 Hi! This is my first post on this blog :)

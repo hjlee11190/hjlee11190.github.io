@@ -169,6 +169,9 @@ defaults:
       author_profile: true
       share: true
       comments: false
+      # No auto-excerpt from the first paragraph: the Blogs listing shows only
+      # an `excerpt:` set in the post's front matter.
+      excerpt_separator: ""
 
 
 # Sass/SCSS

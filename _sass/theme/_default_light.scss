@@ -40,6 +40,7 @@ $sidebar-screen-min-width   : 1024px;
     --global-footer-bg-color            : #{$page-bg-dark};
     --global-border-color               : #{$lighter-gray};
     --global-dark-border-color          : #bdc1c4;
+    --global-divider-color              : #{mix($dark-gray, $page-bg, 50%)};
     --global-code-background-color      : #fafafa;
     --global-code-text-color            : #{$darker-gray};
     --global-fig-caption-color          : mix(#fff,  #{$dark-gray}, 25%);

@@ -331,3 +331,57 @@
     }
   }
 }
+
+/*
+   Blogs listing (_pages/blogs.md)
+   ========================================================================== */
+
+/* Compact rows separated by thin gray rules (between posts only) instead of
+   boxed cards. Title and excerpt sit at the top of the row, the date at the
+   bottom. */
+.blog-list {
+  .archive__item {
+    align-items: stretch;
+    gap: 1.5em;
+    padding: 1.1em 2.5%;   // side inset; the dividers still run full width
+    border: none;
+    border-radius: 0;
+  }
+
+  .list__item + .list__item .archive__item {
+    border-top: 0.5px solid var(--global-divider-color, #9fa2a4);
+  }
+
+  .archive__item-content {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .archive__item-date {
+    margin: auto 0 0;   // pushed to the bottom of the row
+    padding-top: 0.5em;
+    font-size: 0.72em;   // a touch smaller than the excerpt ($type-size-6 = 0.75em), scales with it
+    color: var(--global-text-color);
+    opacity: 0.7;
+  }
+
+  /* Only above the 600px breakpoint, where the image sits beside the text;
+     below it the default full-width image is kept. */
+  @media (min-width: 601px) {
+    .archive__item-teaser {
+      width: 160px;
+      height: 100px;
+    }
+
+    /* Pulls title/excerpt down and the date up toward the middle of the row. */
+    .archive__item-content {
+      padding: 0.4em 0;
+    }
+  }
+
+  @media (max-width: 600px) {
+    .archive__item {
+      gap: 1em;
+    }
+  }
+}
