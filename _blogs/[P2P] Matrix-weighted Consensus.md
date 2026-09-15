@@ -20,12 +20,12 @@ So, the greater the differences between neighboring nodes, the more updates occu
 
 Surprisingly, with these dynamics, the nodes converge to the average value of the initial distribution.
 * The centroid (= average of the initial state) remains constant at any time point during convergence.
-* The centroid is an orthogonal projection of the initial state onto the agreement space (i.e., $\operatorname{span}\{\mathds{1}\}$).
+* The centroid is an orthogonal projection of the initial state onto the agreement space (i.e., $\operatorname{span}\lbrace\mathbb{1}\rbrace$).
 
 ![matrix-weighted consensus](/images/p2p/week2_matrix-eighted_consensus(1).jpg)
 
 ### Matrix-weighted Consensus
-An advanced version of this framework can be considered when **the weights are not scalars, but matrices**. Here, we assume the graph to be undirected, with symmetric, positive semi-definite matrix weights. We can think of this situation when nodes contain multiple types of information, such as $\vec{x}=[t_1, h_1]^T$.
+An advanced version of this framework can be considered when **the weights are not scalars, but matrices**. Here, we assume the graph to be undirected, with symmetric, positive semi-definite matrix weights. We can think of this situation when nodes contain multiple types of information, such as $\mathbb{x}=[t_1, h_1]^T$.
 
 The consensus protocol takes almost the same form as the previous one in terms of convergence stability (global asymptotic convergence), the consensus value, and the invariance of the average. Once the initial state is determined, the equilibrium is unique.
 
