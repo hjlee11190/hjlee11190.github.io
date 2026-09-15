@@ -16,11 +16,11 @@ The core idea we can use is:
 
 So, the greater the differences between neighboring nodes, the more updates occur. This kind of basic framing is especially reasonable because, in many situations nodes can only access information from their neighbors, not global information. A system can reach consensus iff its graph is connected.
 
-![matrix-weighted consensus](/images/p2p/week2_matrix-eighted_consensus(0).png)
+![matrix-weighted consensus](/images/p2p/week2_matrix-eighted_consensus(0).png){: width = "60%"}
 
 Surprisingly, with these dynamics, the nodes converge to the average value of the initial distribution.
 * The centroid (= average of the initial state) remains constant at any time point during convergence.
-* The centroid is an orthogonal projection of the initial state onto the agreement space (i.e., $span{\vec{1}}$).
+* The centroid is an orthogonal projection of the initial state onto the agreement space (i.e., $\operatorname{span}\{\mathds{1}\}$).
 
 ![matrix-weighted consensus](/images/p2p/week2_matrix-eighted_consensus(1).jpg)
 
