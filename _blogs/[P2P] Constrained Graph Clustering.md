@@ -1,13 +1,13 @@
 ---
 title: "[P2P] Constrained Graph Clustering"
 collection: blogs
-date: 2026-09-13
-excerpt: "Brief review of the concept covered in a journal club."
+date: 2026-09-08
+excerpt: "Clustering a graph when there are restrictions"
 ---
 
 Hi! This is my first post on this blog :)
 
-Some friends and I recently started a journal club called Peer to Paper (P2P), where we go through a math-related research paper from each of our fields once a week. You can find more info in this [GitHub repo](https://github.com/hongeun-im/P2P).
+Some friends and I recently started a journal club called Peer to Paper (P2P), where we go through a math-related research paper from each of our fields once a week. You can find more info in this [GitHub repo](https://github.com/hongeun-im/P2P). Thanks to [Hongeun Im](https://github.com/hongeun-im) for the session!
 
 This week, one of our members covered **constrained graph clustering**, and below is my brief review of the topic. It might include some errors, but please excuse any mistakes...
 
