@@ -450,6 +450,11 @@
    ========================================================================== */
 
 .page--blog {
+  /* 10% more line spacing than the default .page__title line-height of 1. */
+  .page__title {
+    line-height: 1.1;
+  }
+
   /* 1.5x the default 1.3em gap between the date and the first paragraph. */
   .page__date {
     margin-bottom: 1.95em;
