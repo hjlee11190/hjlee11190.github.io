@@ -1,7 +1,7 @@
 ---
 title: "[Paper Review] Classification and Geometry of General Perceptual Manifolds"
 collection: blogs
-date: 2026-09-19
+date: 2026-10-05
 excerpt: "How can manifold classification be simplified in terms of dimension and radius?"
 ---
 
